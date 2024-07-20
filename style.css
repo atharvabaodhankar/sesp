@@ -12,31 +12,42 @@
 html {
     font-size: 62.5%;
 }
-
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 p {
     font-size: 1.6rem;
-    line-height: 2.5rem;
 }
 
 #sample {
     height: 100vh;
 }
 
+:root {
+    --blue: #005599;
+    --blue-dark: #01325a;
+    --white : #fff;
+}
+
 /* Logo */
 #logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     padding: 1rem 0;
     -webkit-box-shadow: 0px 2px 23px -10px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 2px 23px -10px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 2px 23px -10px rgba(0, 0, 0, 0.15);
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .logo-img {
-    width: 170px;
-    margin-right: 2rem;
+    width: 160px;
 }
 
 .logo-right {
@@ -46,23 +57,182 @@ p {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
+    padding: 0 2rem;
 }
 
 .logo-right h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
 }
 
+.logo-right h2 {
+    font-size: 1.6rem;
+}
 .logo-right h1 span {
     font-size: 1.3rem;
 }
 
 /* Logo End */
 
-marquee {
-    font-size: 2.5rem;
-    font-weight: 700;
+/* Navbar */
+#navbar {
+    width: 100%;
+    -webkit-box-shadow: 0px 2px 23px -10px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 23px -10px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2px 23px -10px rgba(0, 0, 0, 0.25);
+    transition: all .3s ease;
 }
+#navbar.is-active{
+    background-color: var(--blue);
+    color: var(--white);
+    .hambar{
+        background-color: var(--white);;
+    }
+}
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.nav ul li {
+    position: relative;
+    background-color: var(--blue);
+    padding: 1rem 1rem;
+    cursor: pointer;
+    margin: 1rem 0.5rem;
+}
+
+.nav ul li::after {
+    content: "";
+    width: 100%;
+    height: 0%;
+    background-color: var(--blue-dark);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: all .3s ease;
+    z-index: 1;
+}
+
+.nav ul li:hover::after {
+    height: 100%;
+}
+
+.nav ul li a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--white);
+    transition: all .3s ease;
+    position: relative;
+    z-index: 2;
+}
+.hamburger{
+    cursor: pointer;
+}
+.hamburger .hambar{
+    width: 37px;
+    height: 4px;
+    background-color: var(--blue-dark);
+    display: block;
+    margin: 8px auto;
+    transition: all 0.3s  cubic-bezier(0.77,0.2,0.05,1.0);
+    border-radius: 1rem;
+  }
+  
+  #hamburger-1.is-active .hambar:nth-child(2){
+    opacity: 0;
+  }
+  
+  #hamburger-1.is-active .hambar:nth-child(1){
+    transform: translateY(12px) rotate(45deg);
+  }
+  
+  #hamburger-1.is-active .hambar:nth-child(3){
+    transform: translateY(-12px) rotate(-45deg);
+  }
+  .mobile-nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+  }
+  #navbar.is-active .nav{
+    height: min-content;
+  }
+
+/* Navbar  End*/
+
+
 /* Media Query */
 
-@media screen and (max-width:900px) {}
+@media screen and (max-width:1100px) {
+    .logo-right h1 {
+        font-size: 2.2rem;
+    }
+
+    .logo-right h3 {
+        font-size: 1.3rem;
+    }
+
+    .logo-right h2 {
+        font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width:1000px) {}
+
+@media screen and (max-width:900px) {
+    #navbar {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    .mobile-nav{
+        display: flex;
+    }
+    .nav{
+        height: 0;
+        overflow: hidden;
+        transition: all .3s ease;
+    }
+    .nav ul li {
+        width: 43%;
+        background-color: var(--blue-dark);
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width:800px) {}
+
+@media screen and (max-width:700px) {
+    .logo-img {
+        width: 110px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .logo-right h3 , .logo-right h2 {
+        display: none;
+    }
+    .logo-right h1 {
+        font-size: 1.6rem;
+    }
+    .logo-img{
+        width: 65px;
+        margin-left: 2rem;
+    }
+    .nav ul li a {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .nav ul li {
+        width: 90%;
+    }
+
+    
+}

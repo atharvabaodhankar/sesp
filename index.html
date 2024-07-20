@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./bootstrap.min.css">
     <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <title>S. E. S. Polytechnic, Solapur</title>
   </head>
   <body>
     <section id="main">
-        <div id="logo">
+        <div id="logo" class="flex">
             <img class="logo-img" src="./imgs/sesp-logo.png" alt="">
             <div class="logo-right">
                 <h3>Solapur Education Society (Since 1931)</h3>
@@ -18,9 +17,19 @@
                 <h2>Approved By AICTE, New Delhi; Recognized By DTE, Mumbai And Affiliated To MSBTE, Mumbai</h2>
             </div>
         </div>
-        <div id="navbar">
-            <nav class="nav">
-                <ul>
+        <div id="navbar" class="flex">
+         <div class="mobile-nav">
+          <div class="menu-text flex">
+            <h1>Menu</h1>
+          </div>
+          <div class="hamburger" id="hamburger-1">
+            <span class="hambar"></span>
+            <span class="hambar"></span>
+            <span class="hambar"></span>
+          </div>
+         </div>
+            <nav class="nav flex">
+                <ul class="flex">
                     <li><a href="#">HOME</a></li>
                     <li><a href="#">ABOUT US</a></li>
                     <li><a href="#">PRINCIPAL'S DESK</a></li>
@@ -32,16 +41,18 @@
                     <li><a href="#">PHOTO GALLERY</a></li>
                     <li><a href="#">CONTACT US</a></li>
                     <li><a href="#">NBA</a></li>
-                </ul>
+               
             </nav>
-        </div>
-        <section id="sample">
            
+        </div>
+        <section id="swipe">
+        
+        </section>
+        <section id="sample">
         </section>
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./bootstrap.bundle.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
