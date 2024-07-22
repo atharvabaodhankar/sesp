@@ -1,58 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>S. E. S. Polytechnic, Solapur</title>
-  </head>
-  <body>
-    <section id="main">
-        <div id="logo" class="flex">
-            <img class="logo-img" src="./imgs/sesp-logo.png" alt="">
-            <div class="logo-right">
-                <h3>Solapur Education Society (Since 1931)</h3>
-                <h1>Solapur Education Society's Polytechnic, Solapur <span>(ETD in 1984)</span></h1>
-                <h2>Approved By AICTE, New Delhi; Recognized By DTE, Mumbai And Affiliated To MSBTE, Mumbai</h2>
-            </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./imgs/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <title>S. E. S. Polytechnic, Solapur</title>
+</head>
+
+<body>
+  <section id="main">
+    <div id="logo" class="flex">
+      <img class="logo-img" src="./imgs/sesp-logo.png" alt="">
+      <div class="logo-right">
+        <h3>Solapur Education Society (Since 1931)</h3>
+        <h1>Solapur Education Society's Polytechnic, Solapur <span>(ETD in 1984)</span></h1>
+        <h2>Approved By AICTE, New Delhi; Recognized By DTE, Mumbai And Affiliated To MSBTE, Mumbai</h2>
+      </div>
+    </div>
+    <div id="navbar" class="flex">
+      <div class="mobile-nav">
+        <div class="menu-text flex">
+          <h1>Menu</h1>
         </div>
-        <div id="navbar" class="flex">
-         <div class="mobile-nav">
-          <div class="menu-text flex">
-            <h1>Menu</h1>
-          </div>
-          <div class="hamburger" id="hamburger-1">
-            <span class="hambar"></span>
-            <span class="hambar"></span>
-            <span class="hambar"></span>
-          </div>
-         </div>
-            <nav class="nav flex">
-                <ul class="flex">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">PRINCIPAL'S DESK</a></li>
-                    <li><a href="#">PROGRAMMES</a></li>
-                    <li><a href="#">ASMISSIONS</a></li>
-                    <li><a href="#">LIBRARY</a></li>
-                    <li><a href="#">ALUMNI</a></li>
-                    <li><a href="#">LIBRARY</a></li>
-                    <li><a href="#">PHOTO GALLERY</a></li>
-                    <li><a href="#">CONTACT US</a></li>
-                    <li><a href="#">NBA</a></li>
-               
-            </nav>
-           
+        <div class="hamburger" id="hamburger-1">
+          <span class="hambar"></span>
+          <span class="hambar"></span>
+          <span class="hambar"></span>
         </div>
-        <section id="swipe">
+      </div>
+      <nav class="nav flex">
+        <ul class="flex">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">PRINCIPAL'S DESK</a></li>
+          <li><a href="#">PROGRAMMES</a></li>
+          <li><a href="#">ASMISSIONS</a></li>
+          <li><a href="#">LIBRARY</a></li>
+          <li><a href="#">ALUMNI</a></li>
+          <li><a href="#">LIBRARY</a></li>
+          <li><a href="#">PHOTO GALLERY</a></li>
+          <li><a href="#">CONTACT US</a></li>
+          <li><a href="#">NBA</a></li>
+
+      </nav>
+
+    </div>
+    <section id="swipe">
+      <!-- Slider main container -->
+      <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="https://sespolytechnic.org.in/images/slider/2024/nss24.jpg" alt=""></div>
+          <div class="swiper-slide blue "><img
+              src="https://sespolytechnic.org.in/images/slider/Womens%20Day%20Celebration.jpg" alt=""></div>
+          <div class="swiper-slide red"><img src="https://sespolytechnic.org.in/images/slider/s16.png" alt=""></div>
+          <div class="swiper-slide"><img src="https://sespolytechnic.org.in/images/slider/2024/nss24.jpg" alt=""></div>
+          <div class="swiper-slide blue "><img
+              src="https://sespolytechnic.org.in/images/slider/Womens%20Day%20Celebration.jpg" alt=""></div>
+          <div class="swiper-slide red"><img src="https://sespolytechnic.org.in/images/slider/s16.png" alt=""></div>
+          ...
+        </div>
+
         
-        </section>
-        <section id="sample">
-        </section>
+      </div>
+      <div class="swiper-pagination"></div>
     </section>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="./script.js"></script>
-  </body>
+    <section id="hero">
+        <div class="hero-text">
+          <h5 class="sub-heading-small"><a href="#">S. E. S. Polytechnic, Solapur Campus Video</a></h5>
+          <h3 class="sub-heading"><a href="#">DTE Notification(9/7/2024) - First Year Admission 2024-25</a></h3>
+          <h3 class="sub-heading"><a href="#">DTE Notification(3/7/2024) - For Direct Second Year Admission 2024-25</a></h3>
+        </div>
+    </section>
+    <section id="sample">
+    </section>
+  </section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./script.js"></script>
+  <script>
+    var mySwiper = new Swiper('.swiper-container', {
+      speed: 400,
+      spaceBetween: 100,
+      initialSlide: 0,
+      //truewrapper adoptsheight of active slide
+      autoHeight: false,
+      // Optional parameters
+      direction: 'horizontal',
+      loop: true,
+      // delay between transitions in ms
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+    },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+
+      autoplay: {
+      delay: 2000,
+      pauseOnMouseEnter: true,
+    },
+
+      // And if we need scrollbar
+      //scrollbar: '.swiper-scrollbar',
+      // "slide", "fade", "cube", "coverflow" or "flip"
+      effect: 'slide',
+      // Distance between slides in px.
+      spaceBetween: 60,
+      //
+      slidesPerView: 2,
+      //
+      centeredSlides: true,
+      //
+      slidesOffsetBefore: 0,
+      //
+      grabCursor: true,
+
+      breakpoints: {
+      0: {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+      },
+      600: {
+        slidesPerView: 1.2,
+        spaceBetween: 20,
+      },
+      1000: {
+        slidesPerView: 1.4,
+        spaceBetween: 40,
+      },
+      2900: {
+        slidesPerView: 2,
+        spaceBetween: 60,
+      },
+    },
+    })
+
+  </script>
+</body>
+
 </html>
