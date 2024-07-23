@@ -229,22 +229,160 @@ p {
 
 /* Swiper End */
 
-/* Hero */
-.hero-text{
+/* announcements */
+#announcements{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 6rem 6rem;
+}
+.announcements-text{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3rem 0;
+    margin-right: 4rem;
+}
+.announcements-text a{
+    color: var(--blue-dark);
+    font-weight: 500;
+}
+.announcements-text li{
+    list-style: none;
+    padding: 1.5rem 1rem;
+    transition: all .3s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.announcements-text li .btn-underline::after{
+   background-color: #fff;
+   border-radius: 1rem;
+   height: 2px;
+}
+.announcements-text li i{
+    transform: rotate(-90deg);
+    font-size: 2rem;
+    margin-right: 1.5rem;
+    transition: all .3s ease;
+    color: var(--blue-dark);
+}
+.announcements-text li:hover i{
+    transform: rotate(-135deg);
+    color: var(--blue);
+}
+.announcements-text li:hover{
+    background-color: var(--light-blue);
+    a{
+        color: #fff;
+    }
+    i{
+        color: var(--white);
+    }
+}
+.quick-links{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 370px;
+    background-color: rgb(255, 159, 159);
+}
+.quick-links-button{
+    width: 100%;
+    text-align: center;
+    background-color: var(--blue-dark);
+    color: var(--white);
+    font-size: 3rem;
+    font-weight: 300;
+    padding: 1.5rem 0;
+    cursor: pointer;
+}
+.quick-links-grid{
+    display: flex;
+    width: 100%;
+}
+.quick-links-ul{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 2rem;
-    margin: 3rem 0;
+    list-style: none;
+    width: 100%;
+    background-color: var(--light-blue);
 }
-.hero-text a{
-    color: var(--blue-dark);
+.quick-links-ul li{
+    width: 100%;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    flex-wrap: wrap;
 }
-/* Hero End */
+.quick-links-ul li a {
+    color: #fff;
+    font-size: 1.8rem;
+    justify-content: flex-start;
+    display: flex;
+    align-items: center;
+}
+.quick-links-ul li a i{
+    margin-right: 1.5rem;
+    font-size: 2rem;
+}
+.quick-links-ul li:hover{
+    background-color: var(--blue-dark);
+}
+.quick-links-arrow i{
+    font-size: 2rem;
+    transform: rotate(-180deg);
+    margin-left: 1.5rem;
+    color: #fff;
+    transition: all .3s ease;
+}
+.quick-links-li.active-li{
+    background-color: var(--blue-dark);
+    .quick-links-submenu{
+        display: block;
+    }
+    .quick-links-arrow i {
+        transform: rotate(0deg);
+    }
+}
+.quick-links-submenu{
+    width: 100%;
+    padding-top: 1.5rem;
+    display: none;
+}
+.quick-links-submenu-li i{
+    transform: rotate(90deg);
+}
+.news marquee{
+    margin-top: 3rem;
+    height: 30vh;
+}
+.news .sub-heading-small{
+    font-weight: 500;
+    cursor: pointer;
+}
+.news .sub-heading-small:hover{
+    color: var(--white);
+}
+.news li:hover i{
+    transform: rotate(-90deg) translateY(10px);
+}
+/* announcements End */
 
 /* Media Query */
 
+@media screen and (max-width:1200px) {
+    .quick-links-ul li a {
+        font-size: 1.6rem;
+    }
+}
 @media screen and (max-width:1100px) {
     .logo-right h1 {
         font-size: 2.2rem;
@@ -265,7 +403,21 @@ p {
     }
 }
 
-@media screen and (max-width:1000px) {}
+@media screen and (max-width:1000px) {
+    .sub-heading-small {
+        font-size: 1.6rem;
+    }
+    .heading-main {
+        font-size: 4rem;
+    }
+    .quick-links-button {
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    .quick-links {
+        min-width: 265px;
+    }
+}
 
 @media screen and (max-width:900px) {
     #navbar {
@@ -285,7 +437,10 @@ p {
         background-color: var(--blue-dark);
         text-align: center;
     }
-    
+    #announcements {
+        padding: 6rem 3rem;
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width:800px) {}

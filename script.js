@@ -6,6 +6,13 @@ hamburger.addEventListener("click", () => {
     navBar.classList.toggle("is-active");
 });
 
-     
+// Quick Links
 
+let quickLinksLists = document.querySelectorAll(".quick-links-li");
+
+quickLinksLists.forEach((list) => {
+    list.addEventListener("click", () => {
+        list.classList.toggle("active-li");
+    });
+});
 
