@@ -1,3 +1,13 @@
+const lenis = new Lenis({
+    lerp: 0.05,
+  });
+  
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+
 const hamburger = document.querySelector(".hamburger");
 const quickHamburger = document.querySelector(".quick-links-button");
 const navBar = document.querySelector("#navbar");
@@ -21,3 +31,11 @@ quickLinksLists.forEach((list) => {
     });
 });
 
+var popup = document.querySelector("#popup");
+var popupCloseBtn = document.querySelector(".popup-close");
+setTimeout(() => {
+    popup.style.display = "flex";
+},5000)
+popupCloseBtn.addEventListener("click", () => {
+    document.querySelector(".popup-box").parentElement.style.display = "none";
+});
