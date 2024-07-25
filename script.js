@@ -1,41 +1,40 @@
 const lenis = new Lenis({
-    lerp: 0.05,
-  });
-  
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
+  lerp: 0.05,
+});
+
+function raf(time) {
+  lenis.raf(time);
   requestAnimationFrame(raf);
+}
+requestAnimationFrame(raf);
 
 const hamburger = document.querySelector(".hamburger");
-const quickHamburger = document.querySelector(".quick-links-button");
 const navBar = document.querySelector("#navbar");
 
 hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("is-active");
-    navBar.classList.toggle("is-active");
+  hamburger.classList.toggle("is-active");
+  navBar.classList.toggle("is-active");
 });
 
-quickHamburger.addEventListener("click", () => {
-    quickHamburger.parentElement.classList.toggle("is-active");
+
+
+try {
+    const card = document.querySelector(".principal-img");
+
+card.addEventListener("mousemove", (e) => {
+  let x = e.pageX - innerWidth / 2;
+  let y = e.pageY - innerHeight / 2;
+  gsap.to(card, {
+    x: x / 20,
+    y: y / 20,
+  });
 });
-
-// Quick Links
-
-let quickLinksLists = document.querySelectorAll(".quick-links-li");
-
-quickLinksLists.forEach((list) => {
-    list.addEventListener("click", () => {
-        list.classList.toggle("active-li");
-    });
+card.addEventListener("mouseleave", (e) => {
+  gsap.to(card, {
+    x: 0,
+    y: 0,
+  });
 });
-
-var popup = document.querySelector("#popup");
-var popupCloseBtn = document.querySelector(".popup-close");
-setTimeout(() => {
-    popup.style.display = "flex";
-},5000)
-popupCloseBtn.addEventListener("click", () => {
-    document.querySelector(".popup-box").parentElement.style.display = "none";
-});
+} catch (error) {
+    console.log(error);
+}
