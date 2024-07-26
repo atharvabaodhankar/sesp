@@ -18,10 +18,10 @@
     <div id="logo" class="flex">
       <img class="logo-img" src="./imgs/sesp-logo.png" alt>
       <div class="logo-right">
-        <h3>Solapur Education Society (Since 1931)</h3>
-        <h1>Solapur Education Society's Polytechnic, Solapur <span>(ETD in
+        <h3 class="logo-texts">Solapur Education Society (Since 1931)</h3>
+        <h1 class="logo-texts">Solapur Education Society's Polytechnic, Solapur <span>(ETD in
             1984)</span></h1>
-        <h2>Approved By AICTE, New Delhi; Recognized By DTE, Mumbai And
+        <h2 class="logo-texts">Approved By AICTE, New Delhi; Recognized By DTE, Mumbai And
           Affiliated To MSBTE, Mumbai</h2>
       </div>
     </div>
@@ -166,7 +166,28 @@ Solapur Education Society's Polytechnic
     integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="./script.js"></script>
- 
+  <script>
+    try {
+    const card = document.querySelector(".principal-img");
+
+card.addEventListener("mousemove", (e) => {
+  let x = e.pageX - innerWidth / 2;
+  let y = e.pageY - innerHeight / 2;
+  gsap.to(card, {
+    x: x / 20,
+    y: y / 20,
+  });
+});
+card.addEventListener("mouseleave", (e) => {
+  gsap.to(card, {
+    x: 0,
+    y: 0,
+  });
+});
+} catch (error) {
+    console.log(error);
+}
+  </script>
 </body>
 
 </html>

@@ -155,6 +155,7 @@ html.lenis, html.lenis body {
     -webkit-box-shadow: 0px 2px 23px -10px rgba(0, 0, 0, 0.15);
     -moz-box-shadow: 0px 2px 23px -10px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 2px 23px -10px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
 }
 
 .flex {
@@ -222,6 +223,7 @@ html.lenis, html.lenis body {
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .nav ul li {
@@ -361,6 +363,7 @@ html.lenis, html.lenis body {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    overflow: hidden;
     padding: 6rem 6rem;
 }
 
@@ -595,6 +598,7 @@ html.lenis, html.lenis body {
     justify-content: center;
     flex-direction: column;
     padding: 6rem 6rem;
+    overflow: hidden;
 }
 
 #welcome h1 {
