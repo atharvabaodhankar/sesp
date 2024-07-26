@@ -21,3 +21,24 @@ quickLinksLists.forEach((list) => {
 // popupCloseBtn.addEventListener("click", () => {
 //     document.querySelector(".popup-box").parentElement.style.display = "none";
 // });
+
+
+gsap.utils.toArray(".heading-main").forEach((heading) => {
+    gsap.from(
+      heading,
+  
+      {
+        opacity: 0,
+        y: 50,
+        skewY: -10,
+        ease: "power4.inOut",
+        scrollTrigger: {
+          trigger: heading,
+          scroller: "body",
+          start: "top 80%",
+          end: "bottom 80%",
+          scrub: 3,
+        },
+      }
+    );
+  });

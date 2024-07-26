@@ -32,28 +32,9 @@ homeTl.from("#swipe", {
   ease: "power4",
   stagger: 0.1,
 });
+// Menu Button
 
 // Announcements, News, Vison/Mission
-
-gsap.utils.toArray(".heading-main").forEach((heading) => {
-  gsap.from(
-    heading,
-
-    {
-      opacity: 0,
-      y: 50,
-      skewY: -10,
-      ease: "power4.inOut",
-      scrollTrigger: {
-        trigger: heading,
-        scroller: "body",
-        start: "top 80%",
-        end: "bottom 80%",
-        scrub: 3,
-      },
-    }
-  );
-});
 
 gsap.from(
   ".announcements",
@@ -127,34 +108,144 @@ gsap.from(
 
 // Footer
 
-gsap.from(".icons-section .i-box",
-    {
-    stagger: 0.5,
-    opacity: 0,
-    scale : 0.5,
-    ease: "ease",
-    scrollTrigger: {
-      scroller: "body",
-      trigger: ".icons-section",
-      start: "0% 80%",
-      end: "100% 80%",
-        scrub: 3,
-    },
-  }
-);
-gsap.from(".footer-left , .footer-mid , .footer-right",
-    {
-    stagger: 0.5,
-    opacity: 0,
-    y : 20,
-    skewY : -5,
-    ease: "ease",
-    scrollTrigger: {
-      scroller: "body",
-      trigger: ".footer",
-      start: "0% 80%",
-      end: "20% 80%",
-        scrub: 3,
-    },
-  }
-);
+gsap.from(".icons-section .i-box", {
+  stagger: 0.5,
+  opacity: 0,
+  scale: 0.5,
+  ease: "ease",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".icons-section",
+    start: "0% 80%",
+    end: "100% 80%",
+    scrub: 3,
+  },
+});
+gsap.from(".footer-left , .footer-mid , .footer-right", {
+  stagger: 0.5,
+  opacity: 0,
+  y: 20,
+  skewY: -5,
+  ease: "ease",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".footer",
+    start: "0% 80%",
+    end: "20% 80%",
+    scrub: 3,
+  },
+});
+
+// About Us
+
+var aboutusTl = gsap.timeline({ autoplay: false });
+
+aboutusTl.from(".aboutus-text", {
+  stagger: 0.5,
+  opacity: 0,
+  y: 20,
+  ease: "ease",
+});
+aboutusTl.from(".aboutus > h1", {
+  opacity: 0,
+  y: 40,
+  ease: "ease",
+});
+
+gsap.from(".aboutus-box", {
+  stagger: 0.5,
+  opacity: 0,
+  y: -20,
+  rotate: -5,
+  skewY: -5,
+  ease: "power1",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".aboutus",
+    start: `${window.innerWidth > 800 ? "-15% 80%" : "4% 80%"}`,
+    end: "90% 80%",
+    scrub: 3,
+  },
+});
+
+// Principal
+
+var principalTl = gsap.timeline();
+
+principalTl.from("#principal > h1", {
+  opacity: 0,
+  duration: 1,
+  y: 40,
+  ease: "ease",
+});
+principalTl.from(".principal-img", {
+  opacity: 0,
+  duration: 1,
+  scale: 0.7,
+  y: 40,
+  ease: "ease",
+});
+gsap.from(".pricipal-text", {
+  stagger: 0.5,
+  opacity: 0,
+  y: -20,
+  skewY: -5,
+  ease: "power1",
+  scrollTrigger: {
+    scroller: "body",
+    trigger: ".pricipal-desc",
+    start: `${window.innerWidth > 800 ? "-5% 80%" : "4% 80%"}`,
+    end: "40% 80%",
+    scrub: 2,
+  },
+});
+
+// Programmes
+var programmesTl = gsap.timeline();
+
+programmesTl.from(".programmes-header h1", {
+  opacity: 0,
+  duration: 1,
+  y: 40,
+  ease: "ease",
+});
+programmesTl.from(".programme-wrapper", {
+  stagger: 0.3,
+  opacity: 0,
+  y: -20,
+  ease: "power2",
+});
+
+// Admissions
+var admissionTl = gsap.timeline();
+
+admissionTl.from(".admission-header h1", {
+  opacity: 0,
+  duration: 1,
+  y: 40,
+  ease: "ease",
+});
+
+admissionTl.from(".admission-bar", {
+  opacity: 0,
+  duration: 1,
+  y : 20,
+  ease: "ease",
+});
+
+// Photo Gallery
+var galleryTl = gsap.timeline();
+
+galleryTl.from(".gallary-header h1", {
+  opacity: 0,
+  duration: 1,
+  y: 40,
+  ease: "ease",
+});
+
+galleryTl.from(".gallary", {
+  opacity: 0,
+  duration: 1.3,
+  y : 20,
+  ease: "ease",
+});
