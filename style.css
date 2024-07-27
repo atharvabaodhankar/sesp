@@ -115,7 +115,7 @@ p {
     flex-direction: column;
 }
 .loader img{
-    width: 25rem;
+    width: 22rem;
     margin-bottom: -70px;
     filter: invert(1);
 }

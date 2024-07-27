@@ -1,12 +1,104 @@
+// Loader
+
+var loaderTl = gsap.timeline({
+  onComplete: () => {
+    let loader = document.querySelector("#loader");
+    setTimeout(() => {
+      loader.remove();
+    }, 500)
+  }
+});
+function breakTheLoader() {
+  var h1 = document.querySelector(".loader-heading");
+
+  var splittedText = h1.textContent.split("");
+  var halfValue = Math.ceil(splittedText.length / 2);
+  var clutter = "";
+  splittedText.forEach((letter, idx) => {
+    if (idx < halfValue) {
+      clutter += `<span class="loader-letter-a">${letter}</span>`;
+    } else {
+      clutter += `<span class="loader-letter-b">${letter}</span>`;
+    }
+  });
+
+  h1.innerHTML = clutter;
+}
+
+breakTheLoader();
+
+loaderTl.from(".loader-img", {
+  scale: 0.4,
+  rotate: 20,
+  duration: 1,
+});
+loaderTl.to(
+  ".loader-img",
+  {
+    y: -40,
+    duration: 1,
+  },
+  "loader-h1"
+);
+loaderTl.from(
+  ".loader-letter-a",
+  {
+    y: 80,
+    duration: 0.8,
+    delay: 0.5,
+    stagger: 0.15,
+    opacity: 0,
+  },
+  "loader-h1"
+);
+loaderTl.from(
+  ".loader-letter-b",
+  {
+    y: 80,
+    duration: 0.8,
+    delay: 0.5,
+    stagger: -0.15,
+    opacity: 0,
+  },
+  "loader-h1"
+);
+loaderTl.to(
+  ".loader-wrap-1 ,  .loader-wrap-3",
+  {
+    xPercent: -100,
+    duration: 0.5,
+    delay: 0.5,
+    stagger: 0.15,
+  },"loader-wrap"
+
+);
+loaderTl.to(
+  ".loader-wrap-2 , .loader-wrap-4",
+  {
+    xPercent: 100,
+    duration: 0.5,
+    delay: 0.5,
+    stagger: 0.15,
+  },"loader-wrap"
+);
+loaderTl.to(
+  ".loader",
+  {
+    delay : 0.5,
+    opacity : 0,
+  },"loader-wrap"
+);
+
+
 var homeTl = gsap.timeline();
 
-homeTl.from(".logo-img", {
+loaderTl.from(".logo-img", {
   opacity: 0,
   y: 30,
   duration: 1.3,
   ease: "power1.inOut",
 });
-homeTl.from(".logo-texts", {
+loaderTl.from(".logo-texts", {
   opacity: 0,
   y: 30,
   delay: -1,
@@ -15,7 +107,7 @@ homeTl.from(".logo-texts", {
   stagger: 0.5,
 });
 if (window.innerWidth > 800) {
-  homeTl.from(".nav ul li", {
+  loaderTl.from(".nav ul li", {
     opacity: 0,
     skewX: -30,
     y: 60,
@@ -25,7 +117,7 @@ if (window.innerWidth > 800) {
     stagger: 0.1,
   });
 }
-homeTl.from("#swipe", {
+loaderTl.from("#swipe", {
   opacity: 0,
   scale: 0.5,
   y: 60,
