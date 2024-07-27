@@ -90,10 +90,23 @@ p {
     left: 0;
     z-index: 9999;
     position: fixed;
-    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
+    /* position: relative; */
+}
+.loader-wrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    /* display: flex; */
+}
+.loader-wrap div{
+    height: calc(100% / 4);
+    width:  100%;
+    background-color: #fff;
 }
 .loader{
     display: flex;
@@ -103,10 +116,12 @@ p {
 }
 .loader img{
     width: 25rem;
+    margin-bottom: -70px;
     filter: invert(1);
 }
 .loader-heading{
-    font-size: 8vw;
+    font-size: 10vw;
+    font-weight: 600;
 }
 .loader-heading span{
     display: inline-block;
@@ -1835,6 +1850,9 @@ form .gender{
     .quick-links {
         min-width: 265px;
     }
+    .loader-heading {
+        font-size: 9vw;
+    }
 }
 
 @media screen and (max-width:900px) {
@@ -2008,6 +2026,13 @@ form .gender{
     }
     .alumni-img {
         width: 230px;
+    }
+    .loader img{
+        width: 120px;
+        margin-bottom: -20px;
+    }
+    .loader-heading {
+        font-size: 12vw;
     }
 }
 
