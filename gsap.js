@@ -351,3 +351,37 @@ gsap.from(
     scrollTrigger: ".library-rules-2",
   }
 );
+
+// Alumni 
+var alumniTl = gsap.timeline();
+
+
+alumniTl.from(".alumni-header", {
+  opacity: 0,
+  duration: 1.5,
+  scale : 0.6,
+  y: 70,
+  delay : 1,
+  ease: "ease",
+});
+
+gsap.from(
+  ".alumni h1",
+  {
+    opacity: 0,
+    yPercent: 50,
+    ease: "ease",
+    duration : 1.2,
+    scrollTrigger: ".alumni",
+  }
+);
+gsap.from(
+  ".a-form",
+  {
+    opacity: 0,
+    yPercent: 50,
+    ease: "ease",
+    duration : 1.2,
+    scrollTrigger: ".a-form",
+  }
+);
