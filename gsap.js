@@ -180,7 +180,7 @@ principalTl.from("#principal > h1", {
   y: 40,
   ease: "ease",
 });
-principalTl.from(".principal-img", {
+principalTl.from(".poster-img", {
   opacity: 0,
   duration: 1,
   scale: 0.7,
@@ -278,3 +278,76 @@ contactUsTl.from(
 );
 
 
+// Library 
+var libraryTl = gsap.timeline();
+
+
+libraryTl.from(".library-header h1", {
+  opacity: 0,
+  duration: 1.5,
+  y: 40,
+  delay : 1,
+  ease: "ease",
+});
+
+gsap.from(
+  ".library-collection h2",
+  {
+    opacity: 0,
+    xPercent: -10,
+    ease: "ease",
+    stagger : 1,
+    duration : 1.2,
+    scrollTrigger: ".library-collection",
+  }
+);
+gsap.from(
+  ".library-collection ul",
+  {
+    opacity: 0,
+    yPercent: 10,
+    ease: "ease",
+    duration : 1.2,
+    scrollTrigger: ".library-collection ul",
+  }
+);
+gsap.from(
+  ".library-table",
+  {
+    opacity: 0,
+    yPercent: 10,
+    ease: "ease",
+    duration : 1.2,
+    scrollTrigger: ".library-table",
+  }
+);
+gsap.from(
+  ".library-facilities",
+  {
+    opacity: 0,
+    yPercent: 50,
+    ease: "ease",
+    duration : 1.2,
+    scrollTrigger: ".library-facilities",
+  }
+);
+gsap.from(
+  ".library-rules-1",
+  {
+    opacity: 0,
+    yPercent: 50,
+    ease: "ease",
+    duration : 1.2,
+    scrollTrigger: ".library-rules-1",
+  }
+);
+gsap.from(
+  ".library-rules-2",
+  {
+    opacity: 0,
+    yPercent: 50,
+    ease: "ease",
+    duration : 1.2,
+    scrollTrigger: ".library-rules-2",
+  }
+);
