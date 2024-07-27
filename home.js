@@ -13,14 +13,14 @@ quickLinksLists.forEach((list) => {
     });
 });
 
-// var popup = document.querySelector("#popup");
-// var popupCloseBtn = document.querySelector(".popup-close");
-// setTimeout(() => {
-//     popup.style.display = "flex";
-// },5000)
-// popupCloseBtn.addEventListener("click", () => {
-//     document.querySelector(".popup-box").parentElement.style.display = "none";
-// });
+var popup = document.querySelector("#popup");
+var popupCloseBtn = document.querySelector(".popup-close");
+setTimeout(() => {
+    popup.style.display = "flex";
+},5000)
+popupCloseBtn.addEventListener("click", () => {
+    document.querySelector(".popup-box").parentElement.style.display = "none";
+});
 
 
 gsap.utils.toArray(".heading-main").forEach((heading) => {
@@ -41,4 +41,8 @@ gsap.utils.toArray(".heading-main").forEach((heading) => {
         },
       }
     );
-  });
+});
+  
+
+
+

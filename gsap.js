@@ -14,15 +14,17 @@ homeTl.from(".logo-texts", {
   ease: "power4.inOut",
   stagger: 0.5,
 });
-homeTl.from(".nav ul li", {
-  opacity: 0,
-  skewX: -30,
-  y: 60,
-  delay: -1,
-  duration: 1,
-  ease: "power4.inOut",
-  stagger: 0.1,
-});
+if (window.innerWidth > 800) {
+  homeTl.from(".nav ul li", {
+    opacity: 0,
+    skewX: -30,
+    y: 60,
+    delay: -1,
+    duration: 1,
+    ease: "power4.inOut",
+    stagger: 0.1,
+  });
+}
 homeTl.from("#swipe", {
   opacity: 0,
   scale: 0.5,
@@ -249,3 +251,30 @@ galleryTl.from(".gallary", {
   y : 20,
   ease: "ease",
 });
+
+// Contact Us
+var contactUsTl = gsap.timeline();
+
+
+contactUsTl.from("#contactus", {
+  opacity: 0,
+  duration: 1.5,
+  y: 40,
+  delay : 1,
+  ease: "ease",
+});
+
+contactUsTl.from(
+  ".big-circle",
+
+  {
+    opacity: 0,
+    y: 50,
+    stagger : 0.3,
+    ease: "power4.inOut",
+    duration: 1.5,
+    scale : 0.8,
+  }
+);
+
+
