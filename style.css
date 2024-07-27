@@ -96,7 +96,7 @@ p {
 }
 
 .popup-box {
-    width: 500px;
+    width: 45vw;
     /* height: 90vh; */
     border-radius: 1rem;
     background: rgba( 255, 255, 255, 0.1 );
@@ -1434,86 +1434,7 @@ textarea.input {
   opacity: 0.2;
 }
 
-@media (max-width: 850px) {
-  .form {
-    grid-template-columns: 1fr;
-  }
 
-  .ci-circle {
-    bottom: initial;
-    top: -75px;
-    right: 65px;
-    transform: scale(0.95);
-  }
-
-  .contact-form:before {
-    top: -13px;
-    left: initial;
-    right: 70px;
-  }
-
-  .square {
-    transform: translate(140%, 43%);
-    height: 350px;
-  }
-
-  .big-circle {
-    bottom: 75%;
-    transform: scale(0.9) translate(-40%, 30%);
-    right: 50%;
-  }
-
-  .text {
-    margin: 1rem 0 1.5rem 0;
-  }
-
-  .social-media {
-    padding: 1.5rem 0 0 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    padding: 1.5rem;
-  }
-
-  .ci-circle {
-    display: none;
-  }
-
-  .square,
-  .big-circle {
-    display: none;
-  }
-
-  form,
-  .contact-info {
-    padding: 1.7rem 1.6rem;
-  }
-
-  .text,
-  .information,
-  .social-media p {
-    font-size: 2rem;
-  }
-
-  .c-title {
-    font-size: 2.6rem;
-  }
-
-  .social-icons a {
-    width: 40px;
-    height: 40px;
-    font-size: 2rem;
-  }
-  .input {
-    padding: 1.45rem 1.2rem;
-  }
-
-  .c-btn {
-    padding: 1.45rem 1.2rem;
-  }
-}
 
 /* Contact Us End */
 /* Media Query */
@@ -1550,6 +1471,9 @@ textarea.input {
 
     .swiper-slide {
         width: 100%;
+    }
+    .popup-box {
+        width: 75vw;
     }
 }
 
@@ -1616,6 +1540,41 @@ textarea.input {
     .principal-img {
         width: 600px;
     }
+    .form {
+        grid-template-columns: 1fr;
+      }
+    
+      .ci-circle {
+        bottom: initial;
+        top: -75px;
+        right: 65px;
+        transform: scale(0.95);
+      }
+    
+      .contact-form:before {
+        top: -13px;
+        left: initial;
+        right: 70px;
+      }
+    
+      .square {
+        transform: translate(140%, 43%);
+        height: 350px;
+      }
+    
+      .big-circle {
+        bottom: 75%;
+        transform: scale(0.9) translate(-40%, 30%);
+        right: 50%;
+      }
+    
+      .text {
+        margin: 1rem 0 1.5rem 0;
+      }
+    
+      .social-media {
+        padding: 1.5rem 0 0 0;
+      }
 }
 
 @media screen and (max-width:800px) {
@@ -1754,5 +1713,45 @@ textarea.input {
     .programmes-text {
         width: 155px;
     }
+    .container {
+        padding: 1.5rem;
+      }
+    
+      .ci-circle {
+        display: none;
+      }
+    
+      .square,
+      .big-circle {
+        display: none;
+      }
+    
+      form,
+      .contact-info {
+        padding: 1.7rem 1.6rem;
+      }
+    
+      .text,
+      .information,
+      .social-media p {
+        font-size: 2rem;
+      }
+    
+      .c-title {
+        font-size: 2.6rem;
+      }
+    
+      .social-icons a {
+        width: 40px;
+        height: 40px;
+        font-size: 2rem;
+      }
+      .input {
+        padding: 1.45rem 1.2rem;
+      }
+    
+      .c-btn {
+        padding: 1.45rem 1.2rem;
+      }
     
 }
