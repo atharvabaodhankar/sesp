@@ -995,17 +995,24 @@ footer .wave#wave4 {
     font-size: 2.5rem;
     font-weight: 500;
     color: var(--blue-dark);
+    transform: translateZ(10px);
+    transform-style: preserve-3d;
+
 }
 .programmes-img{
     width: 70px;
     height: 70px;
+    transform: translateZ(10px);
+    transform-style: preserve-3d;
 }
 .programmes-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-
+.programme-wrapper{
+    transform-style: preserve-3d;
+}
 /* Programmes End */
 /* Admission  */
 #admission{
