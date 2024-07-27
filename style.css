@@ -1581,19 +1581,14 @@ textarea.input {
 .a-form{
     max-width: 700px;
     width: 100%;
-    background: #ffffff;
     border-radius: 1rem;
-    box-shadow: 10px 10px 20px #c7c7c7, 
-    -10px -10px 20px #ffffff;
     overflow: hidden;
     margin: 10px;
-    box-shadow: inset 3px 3px 10px #c7c7c7, 
-    inset -3px -3px 10px #ffffff;
+    background-color: #ecf0f3;
 }
 
 .a-form .title{
     padding: 25px;
-    background: #f6f8fa;
 }
 
 .a-form .title p{
@@ -1619,9 +1614,9 @@ textarea.input {
     gap: 20px;
     padding: 25px;
 }
-.a-form form{
+/* .a-form form{
     background-color: rgb(246, 248, 250);
-}
+} */
 .user_details .input_box{
     width: calc(100% / 2 - 20px);
     margin: 0 0 12px 0;
@@ -1649,7 +1644,9 @@ textarea.input {
     padding-left: 15px;
     font-family: 'Poppins', sans-serif;
     transition: all .3s ease;
-    box-shadow: inset 8px 8px 8px #cbc3d194, inset -8px -8px 8px #ffffff; 
+    background: none;
+    color: #555;
+    box-shadow: inset 8px 8px 8px #cbc3d1, inset -8px -8px 8px #ffffff; 
 }
 
 .input_box input:focus,
