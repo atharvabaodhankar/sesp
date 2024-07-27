@@ -7,6 +7,10 @@
     font-family: "Poppins", sans-serif;
     text-decoration: none;
 }
+::selection{
+    background-color: var(--light-blue);
+    color: var(--white);
+}
 .heading-main-large{
     font-size: 8rem;
     color: var(--light-blue);
@@ -236,32 +240,21 @@ html.lenis, html.lenis body {
 .nav ul li a::after {
     content: "";
     width: 0%;
-    height: 50%;
+    height: 0%;
     background-color: var(--blue-dark);
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
     transition: all .3s ease;
     z-index: -1;
+    border-radius: 1rem;
+
 }
 
 .nav ul li:hover a::after {
     width: 100%;
-}
-.nav ul li a::before {
-    content: "";
-    width: 0%;
-    height: 50%;
-    background-color: var(--blue-dark);
-    position: absolute;
-    top: 0;
-    right:  0;
-    transition: all .3s ease;
-    z-index: -1;
-}
-
-.nav ul li:hover a::before {
-    width: 100%;
+    height: 100%;
+    left: 0;
 }
 
 .nav ul li a {
@@ -275,6 +268,7 @@ html.lenis, html.lenis body {
     position: relative;
     background-color: var(--blue);
     display: inline-block;
+    border-radius: 1rem;
 }
 
 .hamburger {
@@ -1522,7 +1516,238 @@ textarea.input {
     font-size: 1.9rem;
     margin: 1rem 0;
 }
+.library-img{
+    -webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 65%, 80% 90%, 50% 100%, 20% 90%, 0 65%, 0 35%, 20% 10%);
+    clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 65%, 80% 90%, 50% 100%, 20% 90%, 0 65%, 0 35%, 20% 10%);
+}
 /* Library End */
+/* Alumni  */
+#alumni{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 6rem 0;
+}
+.alumni-header{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.alumni-img{
+    width: 300px;
+    filter: hue-rotate(-35deg);
+    margin: 4rem 0;
+}
+.alumni-header h2{
+    font-size: 3rem;
+    color: var(--blue-dark);
+}
+.alumni-header h3{
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--light-blue);
+}
+.alumni-btn{
+    padding: 1.5rem 3rem;
+    color: var(--white);
+    background-color: var(--blue-footer);
+    font-size: 2rem;
+    margin: 3rem 0;
+    font-weight: 500;
+    border-radius: 3rem;
+    transition: all .3s ease;
+}
+.alumni-btn:hover{
+    background-color: var(--light-blue);
+}
+
+.alumni{
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.a-form{
+    max-width: 700px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 10px 10px 20px #c7c7c7, 
+    -10px -10px 20px #ffffff;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: inset 3px 3px 10px #c7c7c7, 
+    inset -3px -3px 10px #ffffff;
+}
+
+.a-form .title{
+    padding: 25px;
+    background: #f6f8fa;
+}
+
+.a-form .title p{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+
+.a-form .title p::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background: linear-gradient(to right, var(--blue-dark), var(--light-blue));
+}
+
+.user_details{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+}
+.a-form form{
+    background-color: rgb(246, 248, 250);
+}
+.user_details .input_box{
+    width: calc(100% / 2 - 20px);
+    margin: 0 0 12px 0;
+}
+
+.input_box label{
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 1.5rem;
+    display: block;
+}
+
+.input_box label::after{
+    content: " *";
+    color: red;
+}
+
+.input_box input{
+    width: 100%;
+    height: 45px;
+    border: none;
+    outline: none;
+    border-radius: 2rem;
+    font-size: 16px;
+    padding-left: 15px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 120ms ease-out 0s;
+    transition: all .3s ease;
+    /* background-color: #f6f8fa; */
+    box-shadow: inset 8px 8px 8px #cbc3d194, inset -8px -8px 8px #ffffff; 
+}
+
+
+.input_box input:focus,
+.input_box input:valid{
+    box-shadow: inset 8px 8px 8px #cbc3d1, inset -8px -8px 8px #ffffff; 
+}
+
+form .gender{
+    padding: 0px 25px;
+}
+
+.gender .gender_title{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.gender .category{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.gender .category label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.gender .category label .dot{
+    height: 18px;
+    width: 18px;
+    background: #d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#radio_1:checked ~ .category label .one,
+#radio_2:checked ~ .category label .two,
+#radio_3:checked ~ .category label .three{
+    border-color: #d9d9d9;
+    background: var(--light-blue);
+}
+
+.gender input{
+    display: none;
+}
+
+.reg_btn{
+    padding: 25px;
+    margin: 15px 0;
+}
+
+.reg_btn input{
+    height: 45px;
+    width: 100%;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--blue-dark), var(--light-blue));
+    border-radius: 5px;
+    color: #ffffff;
+    letter-spacing: 1px;
+    box-shadow: 5px 5px 10px #c7c7c7, 
+    -5px -5px 10px #ffffff;
+    transition: all .3s ease;
+}
+
+.reg_btn input:hover{
+    background: linear-gradient(to right, var(--light-blue), var(--blue-dark));
+}
+
+@media screen and (max-width: 584px){
+
+
+
+    .user_details::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .user_details .input_box{
+        width: 100%;
+    }
+
+    .gender .category{
+        width: 100%;
+    }
+
+}
+
+
+@media screen and (max-width: 419px){
+    .gender .category{
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 1.2rem;
+    }   
+}
+/* Alumni End */
 /* Media Query */
 
 
@@ -1688,6 +1913,9 @@ textarea.input {
     .g-swiper{
         height: 55vh;
     }
+    .alumni {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width:700px) {
@@ -1738,6 +1966,16 @@ textarea.input {
     }
     .library-rules ol li{
         font-size: 1.6rem;
+    }
+    .alumni-header h2 {
+        font-size: 2.5rem;
+    }
+    .alumni-header h3{
+        font-size: 1.6rem;
+        margin-top: 1.5rem;
+    }
+    .alumni-img {
+        width: 230px;
     }
 }
 
@@ -1852,5 +2090,11 @@ textarea.input {
       .c-btn {
         padding: 1.45rem 1.2rem;
       }
+      .alumni-btn {
+        font-size: 1.7rem;
+    }
+    .alumni-img {
+        width: 170px;
+    }
     
 }
