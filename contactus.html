@@ -211,46 +211,11 @@
         integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./gsap.js"></script>
-    <script>
-        const inputs = document.querySelectorAll(".input");
-
-function focusFunc() {
-  let parent = this.parentNode;
-  parent.classList.add("focus");
-}
-
-function blurFunc() {
-  let parent = this.parentNode;
-  if (this.value == "") {
-    parent.classList.remove("focus");
-  }
-}
-
-inputs.forEach((input) => {
-  input.addEventListener("focus", focusFunc);
-  input.addEventListener("blur", blurFunc);
-});
-
-
-const circles = document.querySelectorAll(".circle-contacts");
-
-circles.forEach((circle) => {
-  
-  window.addEventListener("mousemove", (e) => {
-  let x = e.pageX - innerWidth / 2;
-  let y = e.pageY - innerHeight / 2;
-  gsap.to(circle, {
-    x: x / 9,
-    y: y / 12,
-    ease : "ease",
-    duration: 2
-  });
-});
-
-});
-
-    </script>
     <script src="./script.js"></script>
+    <script>
+      contactUsSection();
+      contactUsFunc();
+    </script>
     
 </body>
 

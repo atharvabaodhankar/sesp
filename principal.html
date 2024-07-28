@@ -169,26 +169,8 @@ Solapur Education Society's Polytechnic
     <script src="./gsap.js"></script>
   <script src="./script.js"></script>
   <script>
-    try {
-    const card = document.querySelector(".poster-img");
-
-card.addEventListener("mousemove", (e) => {
-  let x = e.pageX - innerWidth / 2;
-  let y = e.pageY - innerHeight / 2;
-  gsap.to(card, {
-    x: x / 20,
-    y: y / 20,
-  });
-});
-card.addEventListener("mouseleave", (e) => {
-  gsap.to(card, {
-    x: 0,
-    y: 0,
-  });
-});
-} catch (error) {
-    console.log(error);
-}
+   
+principalSection();
   </script>
 </body>
 

@@ -303,28 +303,9 @@
     <script src="./gsap.js"></script>
     <script src="./script.js"></script>
     <script>
-        var admissionBoxs = document.querySelectorAll(".admission-box");
-
-        var admissionSections = document.querySelectorAll(".admission-sections");
-        admissionBoxs.forEach((admissionBox) => {
-            admissionBox.addEventListener("click", () => {
-
-                admissionSections.forEach((admissionSection) => {
-                    admissionSection.classList.remove("is-active");
-                    
-                })
-                admissionBoxs.forEach((admissionBox) => {
-                    admissionBox.classList.remove("is-active");
-                })
-
-                let activeElement = admissionBox.dataset.choice;
-                admissionBox.classList.toggle("is-active");
-                document.querySelector(`.${activeElement}`).classList.add("is-active");
-
-                gsap.from(`.${activeElement}`, { duration: 1.5, y: 50, opacity: 0, ease: "power4.inOut" })
-            })
-        })
-
+       
+        admisisonSection();
+        admissionFunc();
     </script>
 </body>
 

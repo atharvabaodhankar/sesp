@@ -1084,9 +1084,12 @@ footer .wave#wave4 {
     margin: 0 1rem;
     cursor: pointer;
     transition: all .3s ease;
+    border: 5px solid transparent;
+
 }
 .admission-box:hover , .admission-box.is-active{
     background-color: var(--blue-dark);
+    border: 5px solid var(--light-blue);
 }
 .admission-box h2{
     font-size: 1.9rem;
@@ -1624,7 +1627,7 @@ textarea.input {
 }
 
 .a-form{
-    max-width: 700px;
+    max-width: 900px;
     width: 100%;
     border-radius: 1rem;
     overflow: hidden;
@@ -1659,9 +1662,7 @@ textarea.input {
     gap: 20px;
     padding: 25px;
 }
-/* .a-form form{
-    background-color: rgb(246, 248, 250);
-} */
+
 .user_details .input_box{
     width: calc(100% / 2 - 20px);
     margin: 0 0 12px 0;
@@ -1681,7 +1682,7 @@ textarea.input {
 
 .input_box input{
     width: 100%;
-    height: 45px;
+    height: 55px;
     border: none;
     outline: none;
     border-radius: 2rem;
@@ -1768,33 +1769,89 @@ form .gender{
     background: linear-gradient(to right, var(--light-blue), var(--blue-dark));
 }
 
-@media screen and (max-width: 584px){
 
-
-
-    .user_details::-webkit-scrollbar{
-        width: 0;
-    }
-
-    .user_details .input_box{
-        width: 100%;
-    }
-
-    .gender .category{
-        width: 100%;
-    }
-
-}
-
-
-@media screen and (max-width: 419px){
-    .gender .category{
-        margin-top: 1rem;
-        flex-direction: column;
-        gap: 1.2rem;
-    }   
-}
 /* Alumni End */
+
+/* Dept */
+#dept{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 7rem 0;
+}
+.dept-heading{
+    width: 90%;
+}
+.dept-buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 4rem 0 ;
+    flex-wrap: wrap;
+    user-select: none;
+}
+.dept-btn{
+    padding: 1rem 1.5rem;
+    background-color: var(--light-blue);
+    color: var(--white);
+    margin: 1.5rem 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    font-size: 2rem;
+    outline: none;
+    border: 5px solid transparent;
+}
+.dept-btn:hover , .dept-btn.is-active{
+    background-color: var(--blue-dark);
+    border: 5px solid var(--light-blue);
+}
+.dept{
+    width: 90%;
+}
+.intro-section{
+ align-items: flex-start;
+ justify-content: flex-start;
+ flex-direction: column;   
+ display: none;
+}
+.intro-section.is-active{
+    display: flex;
+}
+.intro-section p{
+    margin: 3rem 0;
+    font-size: 1.9rem;
+}
+.intro-sign{
+    align-self: flex-end;
+    text-align: end;
+}
+.intro-sign h4{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.intro-sign h5{
+    font-size: 2rem;
+}
+.visionMission-section,.po-pso-section , .labs-section , .photos-section{
+    display: none !important;
+}
+.visionMission-section.is-active , .po-pso-section.is-active , .labs-section.is-active , .photos-section.is-active{
+    display: flex !important;
+}
+.staff-section{
+    background-color: red;
+    width: 100%;
+    height: 100vh;
+    display: none;
+}
+.staff-section.is-active{
+    display: flex;
+}
+
+/* Dept End */
+
 /* Media Query */
 
 
@@ -1852,6 +1909,9 @@ form .gender{
     }
     .loader-heading {
         font-size: 9vw;
+    }
+    .a-form {
+        max-width: 760px;
     }
 }
 
@@ -2034,6 +2094,9 @@ form .gender{
     .loader-heading {
         font-size: 12vw;
     }
+    .intro-section p{
+        font-size: 1.6rem;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -2062,6 +2125,17 @@ form .gender{
     .programmes-img {
         width: 50px;
         height: 50px;
+    }
+    .user_details::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .user_details .input_box{
+        width: 100%;
+    }
+
+    .gender .category{
+        width: 100%;
     }
 }
 
@@ -2153,5 +2227,9 @@ form .gender{
     .alumni-img {
         width: 170px;
     }
-    
+    .gender .category{
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 1.2rem;
+    }  
 }
