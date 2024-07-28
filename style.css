@@ -1902,6 +1902,7 @@ form .gender {
     font-size: 2rem;
     outline: none;
     border: 5px solid transparent;
+    display: inline-block;
 }
 
 .dept-btn:hover, .dept-btn.is-active {

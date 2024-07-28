@@ -148,5 +148,57 @@ function admissionFunc() {
 // Department
 
 function departmentFunc() {
+  var tabSections = document.querySelectorAll(".dept-btn");
+  var realSections = document.querySelectorAll(".dept-sections");
+
+  tabSections.forEach((tab) => {
+      tab.addEventListener("click", () => {
+          tabSections.forEach((section) => {
+              section.classList.remove("is-active");
+          })
+          tab.classList.add("is-active");
+          var tabName = tab.getAttribute("data-section");
+          realSections.forEach((section) => {
+              section.classList.remove("is-active");
+              console.log(section.classList);
+          })
+
+          document.querySelector(`.${tabName}`).classList.add("is-active");
+          gsap.from(`.${tabName}`, { duration: 1.5, y: 50, opacity: 0, ease: "power4.inOut" })
+      })
+  })
+
+  var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    breakpoints: {
+        0: {
+            slidesPerView: 1.2,
+        },
+
+        1200: {
+            slidesPerView: 2,
+        }
+    },
+    coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        dynamicBullets: true,
+    },
+    loop: true,
+    autoplay: {
+        delay: 4000,
+        pauseOnMouseEnter: true,
+    },
+});
+
 
 }
