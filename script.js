@@ -160,11 +160,18 @@ function departmentFunc() {
           var tabName = tab.getAttribute("data-section");
           realSections.forEach((section) => {
               section.classList.remove("is-active");
-              console.log(section.classList);
           })
 
           document.querySelector(`.${tabName}`).classList.add("is-active");
-          gsap.from(`.${tabName}`, { duration: 1.5, y: 50, opacity: 0, ease: "power4.inOut" })
+        gsap.from(`.${tabName}`, { duration: 1.5, y: 50, opacity: 0, ease: "power4.inOut" })
+        
+        if (tabName == "staff-section") {
+          deptStaff();
+        }
+        else if (tabName == "labs-section") {
+          deptLab();
+        }
+
       })
   })
 
@@ -200,5 +207,36 @@ function departmentFunc() {
     },
 });
 
+  function deptStaff() {
+    gsap.from(".staff-box-wrapper", {
+      opacity: 0,
+      yPercent: 50,
+      ease: "ease",
+      duration: 1.2,
+      scale : (innerWidth < 900) ? 1 : 0.7,
+      stagger : 0.3,
+      scrollTrigger: {
+        trigger: ".staff-section",
+        start: "top bottom",
+        end: (innerWidth < 900) ? "100% top" : "70% top",
+        scrub: true,
+      }
+    });
+  }
+  function deptLab() {
+     
+  gsap.from(".lab-box", {
+    opacity: 0,
+    yPercent: 50,
+    stagger : 0.3,
+    scrollTrigger: {
+      trigger: ".labs-section",
+      start: "5% bottom",
+      end: "80% top",
+      scrub: true,
+    }
+  });
+  }
 
 }
+

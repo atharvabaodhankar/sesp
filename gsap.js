@@ -330,7 +330,7 @@ function programmesSection() {
     ease: "ease",
   });
   programmesTl.from(".programme-wrapper", {
-    stagger: 0.3,
+    stagger: 0.1,
     opacity: 0,
     y: -20,
     ease: "power2",
@@ -529,35 +529,7 @@ function deptSection() {
     ease: "ease",
   });
   
-  gsap.from(".staff-box-wrapper", {
-    opacity: 0,
-    yPercent: 50,
-    ease: "ease",
-    duration: 1.2,
-    scale : (innerWidth < 900) ? 1 : 0.7,
-    stagger : 0.3,
-    scrollTrigger: {
-      trigger: ".staff-section",
-      start: "top bottom",
-      end: "70% top",
-      scrub: true,
-    }
-  });
-  
-  gsap.from(".lab-box", {
-    opacity: 0,
-    yPercent: 50,
-    ease: "ease",
-    duration: 1.2,
-    scale : (innerWidth < 900) ? 1 : 0.7,
-    stagger : 0.3,
-    scrollTrigger: {
-      trigger: ".labs-section",
-      start: "top bottom",
-      end: "70% top",
-      scrub: true,
-    }
-  });
+
 
 }
 
