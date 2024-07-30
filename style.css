@@ -2061,7 +2061,8 @@ form .gender {
     position: relative;
     transform-style: preserve-3d;
 }
-.lab-img-desc{
+
+.lab-img-desc {
     width: 100%;
     height: 100%;
     top: 0;
@@ -2076,10 +2077,12 @@ form .gender {
     padding: 0 1.5rem;
     opacity: 0;
 }
-.lab-img:hover .lab-img-desc{
+
+.lab-img:hover .lab-img-desc {
     opacity: 1;
 }
-.lab-img-desc p{
+
+.lab-img-desc p {
     font-size: 2rem;
     color: var(--white);
     transform: translateZ(0px) scale(0.5);
@@ -2087,7 +2090,8 @@ form .gender {
     text-align: center;
     display: block;
 }
-.lab-img:hover .lab-img-desc p{
+
+.lab-img:hover .lab-img-desc p {
     transform: translateZ(100px) scale(1);
 }
 
@@ -2097,7 +2101,8 @@ form .gender {
     object-fit: cover;
     border-radius: 3rem;
 }
-.lab-desc ul h1{
+
+.lab-desc ul h1 {
     margin-bottom: 2rem;
 }
 
@@ -2107,6 +2112,93 @@ form .gender {
 }
 
 /* Dept End */
+/* AICTE */
+#aicte {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 0;
+}
+
+#aicte h1 {
+    margin: 3rem 0;
+}
+
+.aicte-table {
+    width: 800px;
+    text-align: center;
+    overflow-x: scroll;
+}
+
+/* AICTE End */
+/* Training */
+#training {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 0;
+}
+
+.training-header {
+    width: 90%;
+    a{
+        text-align: center;
+        margin: 1rem 0;
+    }
+}
+
+.training-header p {
+    margin: 3rem 0;
+}
+
+.training-btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+}
+
+.training-table {
+    text-align: center;
+    overflow-x: scroll;
+}
+
+.training {
+    width: 90%;
+    margin-top: 4rem;
+}
+.training-regards{
+    margin-top: 4rem;
+}
+.training-regards p{
+    font-size: 2rem;
+}
+/* Training End */
+/* Audits  */
+#audits{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 0;
+}
+.audits{
+    width: 90%;
+    margin-top: 4rem;
+    text-align: center;
+}
+.audits h1{
+    margin-bottom: 3rem;
+}
+/* Audits End */
 
 /* Media Query */
 
@@ -2275,6 +2367,10 @@ form .gender {
     .social-media {
         padding: 1.5rem 0 0 0;
     }
+
+    .aicte-table {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width:800px) {
@@ -2309,18 +2405,22 @@ form .gender {
     .alumni {
         width: 90%;
     }
-    .lab-box , .lab-box:nth-child(even){
+
+    .lab-box, .lab-box:nth-child(even) {
         flex-direction: column;
         align-items: center;
     }
-    .lab-desc ul li{
+
+    .lab-desc ul li {
         margin-left: 0;
     }
-    .lab-desc{
+
+    .lab-desc {
         text-align: center;
         width: auto;
     }
-    .lab-img-desc p{
+
+    .lab-img-desc p {
         font-size: 1.7rem;
     }
 }
@@ -2427,6 +2527,9 @@ form .gender {
     .staff-box-wrapper {
         width: 100%;
     }
+    .training-regards p{
+        font-size: 1.7rem;
+    }
 }
 
 @media screen and (max-width:600px) {
@@ -2471,6 +2574,7 @@ form .gender {
     .gender .category {
         width: 100%;
     }
+
     .lab-img {
         width: 90%;
         height: 300px;
@@ -2591,6 +2695,7 @@ form .gender {
         min-width: 163px;
         height: 216px;
     }
+
     .lab-img {
         width: 90%;
         height: 250px;
